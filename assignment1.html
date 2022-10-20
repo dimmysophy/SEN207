@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Hello Everyone</h1>
+    <script>
+      function multipleof3and5(number) {
+        if (number % 5 == 0 && number % 3!==0) {
+          console.log('fizz')
+        }
+        if (number % 3 == 0 && number % 5 !== 0) {
+          console.log('Buzz')
+        }
+        if (number % 5 == 0 && number % 3 == 0) {
+          console.log('fixxbuzz')
+        }
+        if (number % 5 !== 0 && number % 3 !== 0) {
+          console.log(number)
+        }
+      }
+      multipleof3and5(15)
+
+    </script>
+  </body>
+</html>

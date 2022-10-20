@@ -1,0 +1,67 @@
+<html>
+  <head>
+    <title>Data Structure & Algorithms</title>
+  </head>
+  <body>
+    <h1>WELCOME TO SEN207</h1>
+    <p>"Data structures and Algorithms</p>
+    <form>
+      <input type="number" id="numb" placeholder="Enter a number" />
+    </form>
+    <script>
+      // console.log('Say Hello Victor!')
+      // console.log('Say Hello Henry')
+
+      function sayHello(name) {
+        console.log('Hello' + name)
+      }
+      sayHello('Victor')
+      sayHello('Samuel')
+      sayHello('John')
+      sayHello('Henry')
+      function printnumbers() {
+        console.log('1, 2, 3, 4, 5, 6, 7, 8, 9, 10')
+      }
+       printnumbers()
+      function multipleoffive(number) {
+        if (number % 5 == 0) {
+          console.log('This is a mutliple of 5')
+        } else {
+          console.log('This is not a multiple of 5')
+        }
+      }
+
+      multipleoffive(12)
+       function collectmultipleof5() {
+         var number = prompt('Enter a number')
+         if (number % 5 == 0) {
+           document.write('This is a multiple of 5')
+         } else {
+           document.write('This is not a multiple of 5')
+         }
+       }
+       collectmultipleof5()
+       /* 2. Smallest Common Multiple
+This algorithm is about finding the smallest common multiple numbers of the provided parameters that can be evenly divided by both, as well as by all sequential numbers in the range between these parameters. That range will be an array of two numbers. For example, if given 1 and 3, find the smallest common multiple of both 1 and 3 that is also evenly divisible by all numbers between 1 and 3. In this situation, the answer will be 6. Have a look at the example below:
+*/
+
+      const smallestCommons = (arr) => {
+        let max = Math.max(...arr)
+        let min = Math.min(...arr)
+        // Initially the solution is assigned to the highest value of the array
+        let sol = max
+        for (let i = max - 1; i >= min; i--) {
+          // Each time the solution checks (i.e. sol%i===0) it won't be necessary
+          // to increment 'max' to our solution and restart the loop
+          if (sol % i) {
+            sol += max
+            i = max
+          }
+        }
+        return sol
+      }
+      // Call the function here
+      smallestCommons([1, 5])
+    </script>
+  </body>
+</html>
